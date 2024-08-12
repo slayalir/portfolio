@@ -1,0 +1,638 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+.home {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    min-width: 100%;
+    background: linear-gradient(
+        180.00deg,
+        #fff 25.00%,
+        #eee 50.00%,
+        #ddd 75.00%
+        );
+    align-items: center;
+    justify-content: center;
+}
+
+.main-home-text {
+    display: inline-block;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2.5px solid #000;
+    animation: typing 5s steps(25, end), blink-caret 0.5s step-end infinite;
+    pointer-events: none;
+}
+
+/* about */
+#about {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.about-left, .about-right {
+    height: 100%;
+}
+
+.about-left {
+    flex: 1;
+    flex-basis: 50%;
+    background-image: url(../../images/about-left.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.about-right {
+    display: flex;
+    flex: 1;
+    flex-basis: 50%;
+    position: relative;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    text-align: justify;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.about-content {
+    position: relative;
+    max-width: 500px;
+    color: #fff;
+    text-align: justify;
+    z-index: 1;
+}
+
+.main-about-text {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #000;
+    pointer-events: none;
+    text-align: justify;
+}
+
+.main-about-text1 {
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        flex-basis: auto;
+        height: 50vh;
+        width: 100%;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+}
+
+/* experiences */
+.experiences {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        180.00deg,
+        #ddd 25.00%,
+        #ccc 50.00%,
+        #bbb 75.00%
+        );
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.slider-container {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
+  
+.slider-wrapper {
+    display: flex;
+    flex-direction: row;
+    left: 100px;
+    width: 100%;
+    place-items: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.experiences-slide {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.slick-prev, .slick-next {
+    height: 30px;
+    width: 30px;
+    background: #ccc; 
+    border: 1px solid #000;
+    z-index: 2;
+}
+  
+.slick-prev {
+    position: relative; 
+    left: 10px; 
+}
+  
+.slick-next {
+    position: relative;
+    right: 10px;
+}
+  
+.slick-prev:before, .slick-next:before {
+    font-size: 24px; 
+    color: #333; 
+}
+
+.main-experiences-box {
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+    min-height: auto;
+    width: 80%;
+    min-width: auto;
+    padding: 10px;
+    background-color: #bbb;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    align-self: center;
+    align-content: center;
+    overflow-y: hidden;
+}
+
+.experiences-left, .experiences-right {
+    height: 100%;
+    width: 100%;
+}
+
+.experiences-left {
+    flex: 1;
+    flex-basis: 30%;
+    position: relative;
+    margin-right: -10%;
+}
+
+.experiences-picture {
+    position: relative;
+    height: 100%;
+    width: 125%;
+    opacity: 0.25;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.experiences-right {
+    display: flex;
+    flex-basis: 70%;
+    position: relative;
+    padding-left: 10%;
+    background-size: cover;
+    background-position: center;
+    text-align: justify;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 2;
+}
+
+.experiences-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.experiences-content {
+    position: relative;
+    color: #fff;
+    text-align: justify;
+    z-index: 1;
+}
+
+.main-experiences-text {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #000;
+    pointer-events: none;
+}
+
+.main-experiences-container-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-experiences-text-title {
+    display: inline-block;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2.5px solid #000;
+    animation: typing 5s steps(25, end), blink-caret 0.5s step-end infinite;
+    pointer-events: none;
+}
+
+.main-experiences-text1 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.main-experiences-text2 {
+    font-weight: 400;
+    opacity: 0.25;
+}
+
+.main-experiences-text3 {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.main-experiences-text4 {
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .slider-wrapper {
+        left: 20px;
+    }
+
+    .main-experiences-box {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 75vh;
+        justify-content: center;
+    }
+
+    .experiences-left, .experiences-right {
+        flex-basis: auto;
+        position: absolute;
+        height: 50vh;
+        z-index: 1;
+    }
+
+    .experiences-left {
+        z-index: 2;
+    }
+
+    .experiences-right {
+        left: -35px;
+        z-index: 3;
+    }
+
+    .experiences-content {
+        padding: 20px;
+    }
+
+    .experiences-picture {
+        top: 55px;
+        left: 25px;
+        height: auto;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
+
+    .main-experiences-container-text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-experiences-text4 {
+        text-align: justify;
+    }
+}
+
+/* projects */
+.projects {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    gap: 10px;
+    background: linear-gradient(
+    180.00deg,
+    #bbb 25.00%,
+    #aaa 50.00%,
+    #999 75.00%
+    );
+    align-items: center;
+    justify-content: center;
+}
+
+.main-projects-container-card{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    height: 100%;
+    width: 80%;
+    min-height: auto;
+    min-width: auto;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-projects-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.25s ease-in-out;
+}
+
+.main-projects-card:hover {
+    transform: scale(1.05);
+}
+
+.main-projects-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.main-projects-text {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    pointer-events: none;
+    text-align: center;
+    position: relative;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.main-projects-text-title {
+    display: inline-block;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    white-space: nowrap;
+    margin-bottom: 75px;
+    overflow: hidden;
+    border-right: 2.5px solid #000;
+    animation: typing 5s steps(25, end), blink-caret 0.5s step-end infinite;
+    pointer-events: none;
+}
+
+.main-projects-text1 {
+    font-weight: 600;
+    color: #000;
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+    z-index: 2;
+}
+
+.main-projects-card:hover::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    text-decoration: underline;
+    color: #000;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.25s ease-in-out;
+    z-index: 2;
+}
+
+.main-projects-card:hover .main-projects-button {
+    opacity: 1;
+}
+
+.main-projects-button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    padding: 10px 20px;
+    background: none; /* Warna tombol */
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #000;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 20px;
+    opacity: 0;
+    cursor: pointer;
+    transform: translateX(-50%);
+    transition: opacity 0.55s ease-in-out, background-color 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.main-projects-button:hover {
+    background-color: #000; /* Warna background saat tombol dihover */
+    color: #fff;
+    transform: translateX(-50%) scale(0.95);
+}
+
+.main-projects-button:active {
+    background-color: #000;
+    color: #fff;
+    transform: translateX(-50%) scale(0.90);
+}
+
+@media (max-width: 768px) {
+    .main-projects-container-card{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 85%;
+    }
+}
+
+/* contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+    180.00deg,
+    #999 25.00%,
+    #848484 50.00%,
+    #747474 75.00%
+    );
+    align-items: center;
+    justify-content: center;
+}
+
+.main-contact-button {
+    display: flex;
+    position: relative;
+    width: 200px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    color: black;
+    background: linear-gradient(90deg, transparent 50%, black 50%);
+    background-size: 200%;
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    pointer-events: fill;
+    overflow: hidden;
+    transition: background-position 0.5s ease, color 0.5s ease;
+}
+
+.main-contact-button:hover {
+    background-position: -100% 0;
+    color: #fff;
+}
+
+.main-contact-button:active {
+    background-color: #000;
+    color: #fff;
+    transform: scale(0.90);
+}
+
+.main-contact-button::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: #000;
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+.main-contact-button:hover::before{
+    width: 100%;
+}
+
+.main-contact-button:hover span{
+    position: relative;
+    z-index: 2;
+
+}
+
+.main-contact-text {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #000;
+    pointer-events: none;
+}
+
+.main-contact-text-title {
+    display: inline-block;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    white-space: nowrap;
+    margin-bottom: 75px;
+    overflow: hidden;
+    border-right: 2.5px solid #000;
+    animation: typing 5s steps(25, end), blink-caret 0.5s step-end infinite;
+    pointer-events: none;
+}
+
+.main-contact-text1 {
+    font-weight: 600;
+}
+
+.wrapper {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
